@@ -1,0 +1,3 @@
+/Users/h.gbr/Documents/clion/ibb_basics_p1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/h.gbr/Documents/clion/ibb_basics_p1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/h.gbr/Documents/clion/ibb_basics_p1/cmake-build-debug/CMakeFiles/ibb_basics_p1.dir
