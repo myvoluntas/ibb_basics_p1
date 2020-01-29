@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/h.gbr/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = "/Users/h.gbr/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6015.37/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = "/Users/h.gbr/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+RM = "/Users/h.gbr/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6015.37/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -83,18 +83,18 @@ CMakeFiles/ibb_basics_p1.dir/domain/Book.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ibb_basics_p1.dir/domain/Book.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.cpp -o CMakeFiles/ibb_basics_p1.dir/domain/Book.cpp.s
 
-CMakeFiles/ibb_basics_p1.dir/cite_service/CiteService.cpp.o: CMakeFiles/ibb_basics_p1.dir/flags.make
-CMakeFiles/ibb_basics_p1.dir/cite_service/CiteService.cpp.o: ../cite_service/CiteService.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/h.gbr/Documents/clion/ibb_basics_p1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ibb_basics_p1.dir/cite_service/CiteService.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ibb_basics_p1.dir/cite_service/CiteService.cpp.o -c /Users/h.gbr/Documents/clion/ibb_basics_p1/cite_service/CiteService.cpp
+CMakeFiles/ibb_basics_p1.dir/domain/CiteStyle.cpp.o: CMakeFiles/ibb_basics_p1.dir/flags.make
+CMakeFiles/ibb_basics_p1.dir/domain/CiteStyle.cpp.o: ../domain/CiteStyle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/h.gbr/Documents/clion/ibb_basics_p1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ibb_basics_p1.dir/domain/CiteStyle.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ibb_basics_p1.dir/domain/CiteStyle.cpp.o -c /Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.cpp
 
-CMakeFiles/ibb_basics_p1.dir/cite_service/CiteService.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ibb_basics_p1.dir/cite_service/CiteService.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/h.gbr/Documents/clion/ibb_basics_p1/cite_service/CiteService.cpp > CMakeFiles/ibb_basics_p1.dir/cite_service/CiteService.cpp.i
+CMakeFiles/ibb_basics_p1.dir/domain/CiteStyle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ibb_basics_p1.dir/domain/CiteStyle.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.cpp > CMakeFiles/ibb_basics_p1.dir/domain/CiteStyle.cpp.i
 
-CMakeFiles/ibb_basics_p1.dir/cite_service/CiteService.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ibb_basics_p1.dir/cite_service/CiteService.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/h.gbr/Documents/clion/ibb_basics_p1/cite_service/CiteService.cpp -o CMakeFiles/ibb_basics_p1.dir/cite_service/CiteService.cpp.s
+CMakeFiles/ibb_basics_p1.dir/domain/CiteStyle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ibb_basics_p1.dir/domain/CiteStyle.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.cpp -o CMakeFiles/ibb_basics_p1.dir/domain/CiteStyle.cpp.s
 
 CMakeFiles/ibb_basics_p1.dir/app/App.cpp.o: CMakeFiles/ibb_basics_p1.dir/flags.make
 CMakeFiles/ibb_basics_p1.dir/app/App.cpp.o: ../app/App.cpp
@@ -109,23 +109,83 @@ CMakeFiles/ibb_basics_p1.dir/app/App.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ibb_basics_p1.dir/app/App.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/h.gbr/Documents/clion/ibb_basics_p1/app/App.cpp -o CMakeFiles/ibb_basics_p1.dir/app/App.cpp.s
 
+CMakeFiles/ibb_basics_p1.dir/app/ExecuteApp.cpp.o: CMakeFiles/ibb_basics_p1.dir/flags.make
+CMakeFiles/ibb_basics_p1.dir/app/ExecuteApp.cpp.o: ../app/ExecuteApp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/h.gbr/Documents/clion/ibb_basics_p1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ibb_basics_p1.dir/app/ExecuteApp.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ibb_basics_p1.dir/app/ExecuteApp.cpp.o -c /Users/h.gbr/Documents/clion/ibb_basics_p1/app/ExecuteApp.cpp
+
+CMakeFiles/ibb_basics_p1.dir/app/ExecuteApp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ibb_basics_p1.dir/app/ExecuteApp.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/h.gbr/Documents/clion/ibb_basics_p1/app/ExecuteApp.cpp > CMakeFiles/ibb_basics_p1.dir/app/ExecuteApp.cpp.i
+
+CMakeFiles/ibb_basics_p1.dir/app/ExecuteApp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ibb_basics_p1.dir/app/ExecuteApp.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/h.gbr/Documents/clion/ibb_basics_p1/app/ExecuteApp.cpp -o CMakeFiles/ibb_basics_p1.dir/app/ExecuteApp.cpp.s
+
+CMakeFiles/ibb_basics_p1.dir/database/BookRepository.cpp.o: CMakeFiles/ibb_basics_p1.dir/flags.make
+CMakeFiles/ibb_basics_p1.dir/database/BookRepository.cpp.o: ../database/BookRepository.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/h.gbr/Documents/clion/ibb_basics_p1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ibb_basics_p1.dir/database/BookRepository.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ibb_basics_p1.dir/database/BookRepository.cpp.o -c /Users/h.gbr/Documents/clion/ibb_basics_p1/database/BookRepository.cpp
+
+CMakeFiles/ibb_basics_p1.dir/database/BookRepository.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ibb_basics_p1.dir/database/BookRepository.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/h.gbr/Documents/clion/ibb_basics_p1/database/BookRepository.cpp > CMakeFiles/ibb_basics_p1.dir/database/BookRepository.cpp.i
+
+CMakeFiles/ibb_basics_p1.dir/database/BookRepository.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ibb_basics_p1.dir/database/BookRepository.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/h.gbr/Documents/clion/ibb_basics_p1/database/BookRepository.cpp -o CMakeFiles/ibb_basics_p1.dir/database/BookRepository.cpp.s
+
+CMakeFiles/ibb_basics_p1.dir/database/CiteStyleRepository.cpp.o: CMakeFiles/ibb_basics_p1.dir/flags.make
+CMakeFiles/ibb_basics_p1.dir/database/CiteStyleRepository.cpp.o: ../database/CiteStyleRepository.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/h.gbr/Documents/clion/ibb_basics_p1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ibb_basics_p1.dir/database/CiteStyleRepository.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ibb_basics_p1.dir/database/CiteStyleRepository.cpp.o -c /Users/h.gbr/Documents/clion/ibb_basics_p1/database/CiteStyleRepository.cpp
+
+CMakeFiles/ibb_basics_p1.dir/database/CiteStyleRepository.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ibb_basics_p1.dir/database/CiteStyleRepository.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/h.gbr/Documents/clion/ibb_basics_p1/database/CiteStyleRepository.cpp > CMakeFiles/ibb_basics_p1.dir/database/CiteStyleRepository.cpp.i
+
+CMakeFiles/ibb_basics_p1.dir/database/CiteStyleRepository.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ibb_basics_p1.dir/database/CiteStyleRepository.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/h.gbr/Documents/clion/ibb_basics_p1/database/CiteStyleRepository.cpp -o CMakeFiles/ibb_basics_p1.dir/database/CiteStyleRepository.cpp.s
+
+CMakeFiles/ibb_basics_p1.dir/app/ConsoleUtility.cpp.o: CMakeFiles/ibb_basics_p1.dir/flags.make
+CMakeFiles/ibb_basics_p1.dir/app/ConsoleUtility.cpp.o: ../app/ConsoleUtility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/h.gbr/Documents/clion/ibb_basics_p1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ibb_basics_p1.dir/app/ConsoleUtility.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ibb_basics_p1.dir/app/ConsoleUtility.cpp.o -c /Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.cpp
+
+CMakeFiles/ibb_basics_p1.dir/app/ConsoleUtility.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ibb_basics_p1.dir/app/ConsoleUtility.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.cpp > CMakeFiles/ibb_basics_p1.dir/app/ConsoleUtility.cpp.i
+
+CMakeFiles/ibb_basics_p1.dir/app/ConsoleUtility.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ibb_basics_p1.dir/app/ConsoleUtility.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.cpp -o CMakeFiles/ibb_basics_p1.dir/app/ConsoleUtility.cpp.s
+
 # Object files for target ibb_basics_p1
 ibb_basics_p1_OBJECTS = \
 "CMakeFiles/ibb_basics_p1.dir/main.cpp.o" \
 "CMakeFiles/ibb_basics_p1.dir/domain/Book.cpp.o" \
-"CMakeFiles/ibb_basics_p1.dir/cite_service/CiteService.cpp.o" \
-"CMakeFiles/ibb_basics_p1.dir/app/App.cpp.o"
+"CMakeFiles/ibb_basics_p1.dir/domain/CiteStyle.cpp.o" \
+"CMakeFiles/ibb_basics_p1.dir/app/App.cpp.o" \
+"CMakeFiles/ibb_basics_p1.dir/app/ExecuteApp.cpp.o" \
+"CMakeFiles/ibb_basics_p1.dir/database/BookRepository.cpp.o" \
+"CMakeFiles/ibb_basics_p1.dir/database/CiteStyleRepository.cpp.o" \
+"CMakeFiles/ibb_basics_p1.dir/app/ConsoleUtility.cpp.o"
 
 # External object files for target ibb_basics_p1
 ibb_basics_p1_EXTERNAL_OBJECTS =
 
 ibb_basics_p1: CMakeFiles/ibb_basics_p1.dir/main.cpp.o
 ibb_basics_p1: CMakeFiles/ibb_basics_p1.dir/domain/Book.cpp.o
-ibb_basics_p1: CMakeFiles/ibb_basics_p1.dir/cite_service/CiteService.cpp.o
+ibb_basics_p1: CMakeFiles/ibb_basics_p1.dir/domain/CiteStyle.cpp.o
 ibb_basics_p1: CMakeFiles/ibb_basics_p1.dir/app/App.cpp.o
+ibb_basics_p1: CMakeFiles/ibb_basics_p1.dir/app/ExecuteApp.cpp.o
+ibb_basics_p1: CMakeFiles/ibb_basics_p1.dir/database/BookRepository.cpp.o
+ibb_basics_p1: CMakeFiles/ibb_basics_p1.dir/database/CiteStyleRepository.cpp.o
+ibb_basics_p1: CMakeFiles/ibb_basics_p1.dir/app/ConsoleUtility.cpp.o
 ibb_basics_p1: CMakeFiles/ibb_basics_p1.dir/build.make
 ibb_basics_p1: CMakeFiles/ibb_basics_p1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/h.gbr/Documents/clion/ibb_basics_p1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ibb_basics_p1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/h.gbr/Documents/clion/ibb_basics_p1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ibb_basics_p1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ibb_basics_p1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

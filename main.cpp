@@ -1,7 +1,6 @@
-#include <iostream>
-#include "app/App.h"
+#include "app/ExecuteApp.h"
 
 int main() {
-    App::addBook();
+    ExecuteApp::run();
     return 0;
 }

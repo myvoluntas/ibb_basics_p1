@@ -86,16 +86,40 @@
 		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/app/App.h">
 			<Option target="ibb_basics_p1"/>
 		</Unit>
-		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/cite_service/CiteService.cpp">
+		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.cpp">
 			<Option target="ibb_basics_p1"/>
 		</Unit>
-		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/cite_service/CiteService.h">
+		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.h">
+			<Option target="ibb_basics_p1"/>
+		</Unit>
+		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ExecuteApp.cpp">
+			<Option target="ibb_basics_p1"/>
+		</Unit>
+		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ExecuteApp.h">
+			<Option target="ibb_basics_p1"/>
+		</Unit>
+		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/database/BookRepository.cpp">
+			<Option target="ibb_basics_p1"/>
+		</Unit>
+		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/database/BookRepository.h">
+			<Option target="ibb_basics_p1"/>
+		</Unit>
+		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/database/CiteStyleRepository.cpp">
+			<Option target="ibb_basics_p1"/>
+		</Unit>
+		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/database/CiteStyleRepository.h">
 			<Option target="ibb_basics_p1"/>
 		</Unit>
 		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.cpp">
 			<Option target="ibb_basics_p1"/>
 		</Unit>
 		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.h">
+			<Option target="ibb_basics_p1"/>
+		</Unit>
+		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.cpp">
+			<Option target="ibb_basics_p1"/>
+		</Unit>
+		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.h">
 			<Option target="ibb_basics_p1"/>
 		</Unit>
 		<Unit filename="/Users/h.gbr/Documents/clion/ibb_basics_p1/main.cpp">

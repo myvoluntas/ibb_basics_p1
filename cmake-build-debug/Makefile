@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/h.gbr/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = "/Users/h.gbr/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6015.37/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = "/Users/h.gbr/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+RM = "/Users/h.gbr/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6015.37/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/h.gbr/Documents/clion/ibb_basics_p1/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"/Users/h.gbr/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/CLion.app/Contents/bin/cmake/mac/bin/cmake" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"/Users/h.gbr/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6015.37/CLion.app/Contents/bin/cmake/mac/bin/cmake" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"/Users/h.gbr/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+	"/Users/h.gbr/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6015.37/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -150,32 +150,113 @@ app/App.cpp.s:
 	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/app/App.cpp.s
 .PHONY : app/App.cpp.s
 
-cite_service/CiteService.o: cite_service/CiteService.cpp.o
+app/ConsoleUtility.o: app/ConsoleUtility.cpp.o
 
-.PHONY : cite_service/CiteService.o
+.PHONY : app/ConsoleUtility.o
 
 # target to build an object file
-cite_service/CiteService.cpp.o:
-	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/cite_service/CiteService.cpp.o
-.PHONY : cite_service/CiteService.cpp.o
+app/ConsoleUtility.cpp.o:
+	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/app/ConsoleUtility.cpp.o
+.PHONY : app/ConsoleUtility.cpp.o
 
-cite_service/CiteService.i: cite_service/CiteService.cpp.i
+app/ConsoleUtility.i: app/ConsoleUtility.cpp.i
 
-.PHONY : cite_service/CiteService.i
+.PHONY : app/ConsoleUtility.i
 
 # target to preprocess a source file
-cite_service/CiteService.cpp.i:
-	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/cite_service/CiteService.cpp.i
-.PHONY : cite_service/CiteService.cpp.i
+app/ConsoleUtility.cpp.i:
+	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/app/ConsoleUtility.cpp.i
+.PHONY : app/ConsoleUtility.cpp.i
 
-cite_service/CiteService.s: cite_service/CiteService.cpp.s
+app/ConsoleUtility.s: app/ConsoleUtility.cpp.s
 
-.PHONY : cite_service/CiteService.s
+.PHONY : app/ConsoleUtility.s
 
 # target to generate assembly for a file
-cite_service/CiteService.cpp.s:
-	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/cite_service/CiteService.cpp.s
-.PHONY : cite_service/CiteService.cpp.s
+app/ConsoleUtility.cpp.s:
+	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/app/ConsoleUtility.cpp.s
+.PHONY : app/ConsoleUtility.cpp.s
+
+app/ExecuteApp.o: app/ExecuteApp.cpp.o
+
+.PHONY : app/ExecuteApp.o
+
+# target to build an object file
+app/ExecuteApp.cpp.o:
+	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/app/ExecuteApp.cpp.o
+.PHONY : app/ExecuteApp.cpp.o
+
+app/ExecuteApp.i: app/ExecuteApp.cpp.i
+
+.PHONY : app/ExecuteApp.i
+
+# target to preprocess a source file
+app/ExecuteApp.cpp.i:
+	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/app/ExecuteApp.cpp.i
+.PHONY : app/ExecuteApp.cpp.i
+
+app/ExecuteApp.s: app/ExecuteApp.cpp.s
+
+.PHONY : app/ExecuteApp.s
+
+# target to generate assembly for a file
+app/ExecuteApp.cpp.s:
+	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/app/ExecuteApp.cpp.s
+.PHONY : app/ExecuteApp.cpp.s
+
+database/BookRepository.o: database/BookRepository.cpp.o
+
+.PHONY : database/BookRepository.o
+
+# target to build an object file
+database/BookRepository.cpp.o:
+	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/database/BookRepository.cpp.o
+.PHONY : database/BookRepository.cpp.o
+
+database/BookRepository.i: database/BookRepository.cpp.i
+
+.PHONY : database/BookRepository.i
+
+# target to preprocess a source file
+database/BookRepository.cpp.i:
+	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/database/BookRepository.cpp.i
+.PHONY : database/BookRepository.cpp.i
+
+database/BookRepository.s: database/BookRepository.cpp.s
+
+.PHONY : database/BookRepository.s
+
+# target to generate assembly for a file
+database/BookRepository.cpp.s:
+	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/database/BookRepository.cpp.s
+.PHONY : database/BookRepository.cpp.s
+
+database/CiteStyleRepository.o: database/CiteStyleRepository.cpp.o
+
+.PHONY : database/CiteStyleRepository.o
+
+# target to build an object file
+database/CiteStyleRepository.cpp.o:
+	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/database/CiteStyleRepository.cpp.o
+.PHONY : database/CiteStyleRepository.cpp.o
+
+database/CiteStyleRepository.i: database/CiteStyleRepository.cpp.i
+
+.PHONY : database/CiteStyleRepository.i
+
+# target to preprocess a source file
+database/CiteStyleRepository.cpp.i:
+	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/database/CiteStyleRepository.cpp.i
+.PHONY : database/CiteStyleRepository.cpp.i
+
+database/CiteStyleRepository.s: database/CiteStyleRepository.cpp.s
+
+.PHONY : database/CiteStyleRepository.s
+
+# target to generate assembly for a file
+database/CiteStyleRepository.cpp.s:
+	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/database/CiteStyleRepository.cpp.s
+.PHONY : database/CiteStyleRepository.cpp.s
 
 domain/Book.o: domain/Book.cpp.o
 
@@ -203,6 +284,33 @@ domain/Book.s: domain/Book.cpp.s
 domain/Book.cpp.s:
 	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/domain/Book.cpp.s
 .PHONY : domain/Book.cpp.s
+
+domain/CiteStyle.o: domain/CiteStyle.cpp.o
+
+.PHONY : domain/CiteStyle.o
+
+# target to build an object file
+domain/CiteStyle.cpp.o:
+	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/domain/CiteStyle.cpp.o
+.PHONY : domain/CiteStyle.cpp.o
+
+domain/CiteStyle.i: domain/CiteStyle.cpp.i
+
+.PHONY : domain/CiteStyle.i
+
+# target to preprocess a source file
+domain/CiteStyle.cpp.i:
+	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/domain/CiteStyle.cpp.i
+.PHONY : domain/CiteStyle.cpp.i
+
+domain/CiteStyle.s: domain/CiteStyle.cpp.s
+
+.PHONY : domain/CiteStyle.s
+
+# target to generate assembly for a file
+domain/CiteStyle.cpp.s:
+	$(MAKE) -f CMakeFiles/ibb_basics_p1.dir/build.make CMakeFiles/ibb_basics_p1.dir/domain/CiteStyle.cpp.s
+.PHONY : domain/CiteStyle.cpp.s
 
 main.o: main.cpp.o
 
@@ -243,12 +351,24 @@ help:
 	@echo "... app/App.o"
 	@echo "... app/App.i"
 	@echo "... app/App.s"
-	@echo "... cite_service/CiteService.o"
-	@echo "... cite_service/CiteService.i"
-	@echo "... cite_service/CiteService.s"
+	@echo "... app/ConsoleUtility.o"
+	@echo "... app/ConsoleUtility.i"
+	@echo "... app/ConsoleUtility.s"
+	@echo "... app/ExecuteApp.o"
+	@echo "... app/ExecuteApp.i"
+	@echo "... app/ExecuteApp.s"
+	@echo "... database/BookRepository.o"
+	@echo "... database/BookRepository.i"
+	@echo "... database/BookRepository.s"
+	@echo "... database/CiteStyleRepository.o"
+	@echo "... database/CiteStyleRepository.i"
+	@echo "... database/CiteStyleRepository.s"
 	@echo "... domain/Book.o"
 	@echo "... domain/Book.i"
 	@echo "... domain/Book.s"
+	@echo "... domain/CiteStyle.o"
+	@echo "... domain/CiteStyle.i"
+	@echo "... domain/CiteStyle.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

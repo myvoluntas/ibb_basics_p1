@@ -7,8 +7,8 @@
 #include <string.h>
 #include "Book.h"
 
-Book::Book(const std::string &author, const std::string &publisher,
-           const std::string &isbn, const std::string &volume, const std::string &title, const std::string &year) :
+Book::Book(std::string author, std::string publisher,
+           std::string isbn, std::string volume, std::string title, std::string year) :
         author_(author), publisher_(publisher), isbn_(isbn), volume_(volume), title_(title), year_(year) {
 };
 
@@ -42,26 +42,26 @@ void Book::setYear(const std::string &year) {
 
 // ----------------------- Getter
 
-const std::string &Book::getAuthor() const {
+std::string Book::getAuthor() {
     return author_;
 }
 
-const std::string &Book::getPublisher() const {
+std::string Book::getPublisher() {
     return publisher_;
 }
 
-const std::string &Book::getIsbn() const {
+std::string Book::getIsbn() {
     return isbn_;
 }
 
-const std::string &Book::getVolume() const {
+std::string Book::getVolume() {
     return volume_;
 }
 
-const std::string &Book::getTitle() const {
+std::string Book::getTitle() {
     return title_;
 }
 
-const std::string &Book::getYear() const {
+std::string Book::getYear() {
     return year_;
 }

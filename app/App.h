@@ -7,25 +7,49 @@
 
 
 #include <ostream>
+#include "../domain/CiteStyle.h"
+
+// Todo next: Get rid of static and implement quit as private field in App class.
+static bool quit;
+static int citeStyle;
 
 struct App {
 private:
 
+    static std::string getCiteElement(Book book, CiteElement element);
+
+    static void citeBook(Book book, CiteStyle style);
+
 public:
-    static void printMessage(std::ostream &os, std::string message);
+    static bool quitApp();
 
-//static T readUserInput(std::istream &is);
-    static std::string readUserInputStr();
+    static bool startApp();
+
+    static void citeBooks(std::vector<Book> books, CiteStyle style);
+
+    static int getCiteStyle();
+
+    static void setCiteStyle(const std::string &index);
+
+    static void pickCiteStyle();
+
+    static void defaultCitation(std::vector<Book> books,CiteStyle style);
+
+    static void printMessage(std::ostream &os, const std::string &message);
+
+    //static void citeBooksToConsole(std::vector<Book> books, std::vector<CiteStyle> styles, int indexToCite );
+    static std::string readUserInput();
+
+    static Book defineBook();
+
+    static void initBookDB();
+    //static void storeDefaultCiteStyle();
+
+    static CiteStyle defineCiteStyle();
+
+    static bool readAppRunState();
+
     static int readUserInputNbr();
-
-//    template<typename T>
-//    static T readUserInput(std::istream &cin);
-
-    static void addBook();
-    static void citeDefault();
-    static void defineCiteStyle();
-    static void deleteBook();
-    static void quit();
 };
 
 

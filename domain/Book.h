@@ -24,9 +24,9 @@ private:
     std::string title_;
     std::string year_;
 public:
-    Book(const std::string &author = "", const std::string &publisher = "",
-         const std::string &isbn = "", const std::string &volume = "", const std::string &title = "",
-         const std::string &year = "");
+    Book(std::string author = "", std::string publisher = "",
+         std::string isbn = "", std::string volume = "", std::string title = "",
+         std::string year = "");
 
     void setAuthor(const std::string &author);
 
@@ -40,17 +40,17 @@ public:
 
     void setYear(const std::string &year);
 
-    const std::string &getAuthor() const;
+    std::string getAuthor();
 
-    const std::string &getPublisher() const;
+    std::string getPublisher();
 
-    const std::string &getIsbn() const;
+    std::string getIsbn();
 
-    const std::string &getVolume() const;
+    std::string getVolume();
 
-    const std::string &getTitle() const;
+    std::string getTitle();
 
-    const std::string &getYear() const;
+    std::string getYear();
 };
 
 
