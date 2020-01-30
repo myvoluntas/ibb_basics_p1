@@ -49,7 +49,8 @@ void CiteStyle::setFirstCiteElement(int n) {
         case 6:
             firstCiteElement = CiteElement::year;
             break;
-        default: break;
+        default:
+            break;
     }
 }
 
@@ -73,7 +74,8 @@ void CiteStyle::setSecondCiteElement(int n) {
         case 6:
             secondCiteElement = CiteElement::year;
             break;
-        default: break;
+        default:
+            break;
     }
 }
 
@@ -97,7 +99,8 @@ void CiteStyle::setThirdCiteElement(int n) {
         case 6:
             thirdCiteElement = CiteElement::year;
             break;
-        default: break;
+        default:
+            break;
     }
 }
 
@@ -121,7 +124,8 @@ void CiteStyle::setFourthCiteElement(int n) {
         case 6:
             fourthCiteElement = CiteElement::year;
             break;
-        default: break;
+        default:
+            break;
     }
 }
 
@@ -145,7 +149,8 @@ void CiteStyle::setFifthCiteElement(int n) {
         case 6:
             fifthCiteElement = CiteElement::year;
             break;
-        default: break;
+        default:
+            break;
     }
 }
 
@@ -153,14 +158,19 @@ void CiteStyle::setSixthCiteElement(int n) {
     switch (n) {
         case 1:
             sixthCiteElement = CiteElement::author;
+            break;
         case 2:
             sixthCiteElement = CiteElement::publisher;
+            break;
         case 3:
             sixthCiteElement = CiteElement::isbn;
+            break;
         case 4:
             sixthCiteElement = CiteElement::volume;
+            break;
         case 5:
             sixthCiteElement = CiteElement::title;
+            break;
         case 6:
             sixthCiteElement = CiteElement::year;
             break;
@@ -169,11 +179,12 @@ void CiteStyle::setSixthCiteElement(int n) {
     }
 }
 
+void CiteStyle::setCiteStyleName(const std::string &citeName) {
+    citeStyleName = citeName;
+}
+
 std::string CiteStyle::getCiteStyleName() {
     return citeStyleName;
 }
 
 
-void CiteStyle::setCiteStyleName(std::string citeName) {
-    citeStyleName = citeName;
-}

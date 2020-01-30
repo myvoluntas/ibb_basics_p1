@@ -4,16 +4,17 @@
 
 #include "Book.h"
 
-#include <string.h>
-#include "Book.h"
+#include <utility>
 
+//Experiment with move()
 Book::Book(std::string author, std::string publisher,
            std::string isbn, std::string volume, std::string title, std::string year) :
-        author_(author), publisher_(publisher), isbn_(isbn), volume_(volume), title_(title), year_(year) {
-};
+        author_(std::move(author)), publisher_(std::move(publisher)), isbn_(std::move(isbn)),
+        volume_(std::move(volume)), title_(std::move(title)), year_(std::move(year)) {
+}
 
 
-// --------------------- Setter
+// Setter
 
 void Book::setAuthor(const std::string &author) {
     author_ = author;
@@ -40,7 +41,7 @@ void Book::setYear(const std::string &year) {
 }
 
 
-// ----------------------- Getter
+// Getter
 
 std::string Book::getAuthor() {
     return author_;

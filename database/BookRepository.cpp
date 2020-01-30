@@ -4,7 +4,7 @@
 
 #include "BookRepository.h"
 
-void BookRepository::store(Book book) {
+void BookRepository::store(const Book &book) {
     books.push_back(book);
 }
 
@@ -16,6 +16,7 @@ void BookRepository::deleteBookLIFO() {
     books.pop_back();
 }
 
+// Todo not used
 std::string BookRepository::getBookById(int id) {
     return books[id].getPublisher();
 }

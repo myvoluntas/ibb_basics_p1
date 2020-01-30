@@ -10,6 +10,7 @@
 
 
 /*
+  Todo Next
    - const string& getName(); – Rückgabewert darf nicht verändert werden.
    - void print(const string& msg); –Der Parameterwird in der Funktion nicht verändert.
    - void Widget::drawYourself() const; – Die Methode verändert ihr Objekt nicht.
@@ -24,7 +25,7 @@ private:
     std::string title_;
     std::string year_;
 public:
-    Book(std::string author = "", std::string publisher = "",
+    explicit Book(std::string author = "", std::string publisher = "",
          std::string isbn = "", std::string volume = "", std::string title = "",
          std::string year = "");
 

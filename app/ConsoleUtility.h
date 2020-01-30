@@ -4,7 +4,15 @@
 
 #ifndef IBB_BASICS_P1_CONSOLEUTILITY_H
 #define IBB_BASICS_P1_CONSOLEUTILITY_H
-struct ConsoleUtility{
+
+struct ConsoleUtility {
+
+    static void printMessage(std::ostream &os, const std::string &message);
+
+    static std::string readUserInput();
+
+    static int readUserInputNbr();
+
     static void position0();
 
     static void position1();
@@ -20,6 +28,8 @@ struct ConsoleUtility{
     static void citeElementOptions();
 
     static void options();
+
+    static void printCiteStyles(const std::vector<CiteStyle> &citeStyles);
 };
 
 

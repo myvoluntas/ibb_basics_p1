@@ -15,17 +15,17 @@ static int citeStyle;
 
 struct App {
 private:
+    // Todo Implementation with move or &
+    static std::string getCiteElement(Book book, const CiteElement &element);
 
-    static std::string getCiteElement(Book book, CiteElement element);
-
-    static void citeBook(Book book, CiteStyle style);
+    static void citeBook(const Book &book, CiteStyle style);
 
 public:
     static bool quitApp();
 
     static bool startApp();
 
-    static void citeBooks(std::vector<Book> books, CiteStyle style);
+    static void citeBooks(const std::vector<Book> &books, const CiteStyle &style);
 
     static int getCiteStyle();
 
@@ -33,23 +33,13 @@ public:
 
     static void pickCiteStyle();
 
-    static void defaultCitation(std::vector<Book> books,CiteStyle style);
-
-    static void printMessage(std::ostream &os, const std::string &message);
-
-    //static void citeBooksToConsole(std::vector<Book> books, std::vector<CiteStyle> styles, int indexToCite );
-    static std::string readUserInput();
+    static void defaultCitation(const std::vector<Book> &books, const CiteStyle &style);
 
     static Book defineBook();
 
-    static void initBookDB();
-    //static void storeDefaultCiteStyle();
-
     static CiteStyle defineCiteStyle();
 
-    static bool readAppRunState();
 
-    static int readUserInputNbr();
 };
 
 

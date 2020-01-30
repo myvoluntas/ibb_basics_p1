@@ -14,11 +14,11 @@ struct CiteStyleRepository {
 private:
     std::vector<CiteStyle> citeStyles;
 public:
-    void store(CiteStyle citeStyle);
+    void store(const CiteStyle &citeStyle);
 
-    CiteStyle getCiteStyleByIndex(int index);
+    CiteStyle getCiteStyleByIndex(const int &index);
 
-    std::vector<CiteStyle> getCiteStyle();
+    std::vector<CiteStyle> getCiteStyles();
 
     int lengthCiteStyles();
 

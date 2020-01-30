@@ -13,13 +13,14 @@
 
 struct BookRepository {
     std::vector<Book> books;
-
 public:
-    void store(Book book);
+    void store(const Book &book);
 
     std::vector<Book> getBooks();
 
     void deleteBookLIFO();
+
+    // No used
     std::string getBookById(int id);
 
 };

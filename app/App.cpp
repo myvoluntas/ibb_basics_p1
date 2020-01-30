@@ -9,31 +9,12 @@
 #include "../database/BookRepository.h"
 #include "ConsoleUtility.h"
 
-void App::printMessage(std::ostream &os, const std::string &message) {
-    os << message << std::endl;
-}
 
-
-std::string App::readUserInput() {
-    //std::istream &is
-    std::string input{};
-    std::getline(std::cin, input);
-    return input;
-}
-
-int App::readUserInputNbr() {
-    std::string input{};
-    //std::string bla;
-    std::getline(std::cin, input);
-    return std::stoi(input);
-}
-
-
-void App::defaultCitation(std::vector<Book> books, CiteStyle style) {
+void App::defaultCitation(const std::vector<Book> &books, const CiteStyle &style) {
     App::citeBooks(books, style);
 }
 
-std::string App::getCiteElement(Book book, CiteElement element) {
+std::string App::getCiteElement(Book book, const CiteElement &element) {
     switch (element) {
         case CiteElement::author:
             return book.getAuthor();
@@ -52,7 +33,7 @@ std::string App::getCiteElement(Book book, CiteElement element) {
     }
 }
 
-void App::citeBook(Book book, CiteStyle style) {
+void App::citeBook(const Book &book, CiteStyle style) {
     std::string first = getCiteElement(book, style.getFirstCiteElement());
     std::string second = getCiteElement(book, style.getSecondCiteElement());
     std::string third = getCiteElement(book, style.getThirdCiteElement());
@@ -66,16 +47,11 @@ void App::citeBook(Book book, CiteStyle style) {
               << fifth << space << sixth << "]" << std::endl;
 }
 
-void App::citeBooks(std::vector<Book> books, CiteStyle style) {
-    for (auto book : books) {
+void App::citeBooks(const std::vector<Book> &books, const CiteStyle &style) {
+    for (const auto &book : books) {
         citeBook(book, style);
     }
 }
-
-//void App::citeBooksToConsole(std::vector<Book> books, std::vector<CiteStyle> styles, int indexToCite) {
-//    citeBooks(books, styles[indexToCite]);
-//}
-
 
 void App::setCiteStyle(const std::string &index) {
     citeStyle = std::stoi(index);
@@ -83,10 +59,6 @@ void App::setCiteStyle(const std::string &index) {
 
 int App::getCiteStyle() {
     return citeStyle;
-}
-
-bool App::readAppRunState() {
-    return quit;
 }
 
 bool App::quitApp() {
@@ -100,8 +72,8 @@ bool App::startApp() {
 }
 
 void App::pickCiteStyle() {
-    App::printMessage(std::cout, "Waehle Zitierstil");
-    const std::string userInput = readUserInput();
+    ConsoleUtility::printMessage(std::cout, "Waehle Zitierstil");
+    const std::string userInput = ConsoleUtility::readUserInput();
     App::setCiteStyle(userInput);
 }
 
@@ -109,73 +81,69 @@ void App::pickCiteStyle() {
 Book App::defineBook() {
     Book book = Book();
 
-    App::printMessage(std::cout, "1/6 Nenne den Autor");
-    const std::string author = readUserInput();
+    ConsoleUtility::printMessage(std::cout, "1/6 Nenne den Autor");
+    const std::string author = ConsoleUtility::readUserInput();
     book.setAuthor(author);
 
 
-    App::printMessage(std::cout, "2/6 Nenne den Verlag");
-    const std::string publisher = readUserInput();
+    ConsoleUtility::printMessage(std::cout, "2/6 Nenne den Verlag");
+    const std::string publisher = ConsoleUtility::readUserInput();
     book.setPublisher(publisher);
 
-    App::printMessage(std::cout, "3/6 Nenne die ISBN");
-    const std::string isbn = readUserInput();
+    ConsoleUtility::printMessage(std::cout, "3/6 Nenne die ISBN");
+    const std::string isbn = ConsoleUtility::readUserInput();
     book.setIsbn(isbn);
 
-    App::printMessage(std::cout, "4/6 Nenne die Ausgabe");
-    const std::string volume = readUserInput();
+    ConsoleUtility::printMessage(std::cout, "4/6 Nenne die Auflage/Ausgabe des Buches ");
+    const std::string volume = ConsoleUtility::readUserInput();
     book.setVolume(volume);
 
-    App::printMessage(std::cout, "5/6 Nenne den Titel");
-    const std::string title = readUserInput();
+    ConsoleUtility::printMessage(std::cout, "5/6 Nenne den Buchtitel");
+    const std::string title = ConsoleUtility::readUserInput();
     book.setTitle(title);
 
-    App::printMessage(std::cout, "6/6 Erscheinungsjahr");
-    const std::string year = readUserInput();
+    ConsoleUtility::printMessage(std::cout, "6/6 Nenne das Erscheinungsjahr");
+    const std::string year = ConsoleUtility::readUserInput();
     book.setYear(year);
     return book;
-    //book_database.store(book);
-
-    // Todo create default Cytestyle object
-    //CiteStyle::defaultCitation();
 }
 
 
 CiteStyle App::defineCiteStyle() {
     CiteStyle style{};
-    App::printMessage(std::cout, "Bennene deinen Zitierstil");
-    std::string citeStyleName = readUserInput();
+    ConsoleUtility::printMessage(std::cout, "Wie soll dein Zitierstil heißen? Beispiel: TU Darmstadt Stil");
+    std::string citeStyleName = ConsoleUtility::readUserInput();
     style.setCiteStyleName(citeStyleName);
 
     ConsoleUtility::position0();
     ConsoleUtility::citeElementOptions();
-    int firstUserInput = readUserInputNbr();
+    int firstUserInput = ConsoleUtility::readUserInputNbr();
     style.setFirstCiteElement(firstUserInput);
 
     ConsoleUtility::position1();
     ConsoleUtility::citeElementOptions();
-    int secondUserInput = readUserInputNbr();
+    int secondUserInput = ConsoleUtility::readUserInputNbr();
     style.setSecondCiteElement(secondUserInput);
 
 
     ConsoleUtility::position2();
     ConsoleUtility::citeElementOptions();
-    int thirdUserInput = readUserInputNbr();
+    int thirdUserInput = ConsoleUtility::readUserInputNbr();
     style.setThirdCiteElement(thirdUserInput);
 
     ConsoleUtility::position3();
     ConsoleUtility::citeElementOptions();
-    int fourthUserInput = readUserInputNbr();
+    int fourthUserInput = ConsoleUtility::readUserInputNbr();
     style.setFourthCiteElement(fourthUserInput);
 
     ConsoleUtility::position4();
     ConsoleUtility::citeElementOptions();
-    int fifthUserInput = readUserInputNbr();
+    int fifthUserInput = ConsoleUtility::readUserInputNbr();
     style.setFifthCiteElement(fifthUserInput);
 
     ConsoleUtility::position5();
     ConsoleUtility::citeElementOptions();
-    int sixthUserInput = readUserInputNbr();
+    int sixthUserInput = ConsoleUtility::readUserInputNbr();
     style.setSixthCiteElement(sixthUserInput);
 
     return style;

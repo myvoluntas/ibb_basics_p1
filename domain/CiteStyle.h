@@ -28,7 +28,6 @@ private:
 
     std::string citeStyleName;
 
-    // Todo Move to App
 
 public:
     CiteElement getFirstCiteElement();
@@ -58,7 +57,7 @@ public:
 
     void setSixthCiteElement(int n);
 
-    void setCiteStyleName(std::string citeName);
+    void setCiteStyleName(const std::string &citeName);
 
 
 };
