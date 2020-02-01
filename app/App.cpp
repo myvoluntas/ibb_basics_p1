@@ -10,8 +10,8 @@
 #include "ConsoleUtility.h"
 
 
-App::App(bool appState, int citeStyle) :
-        appState_(appState), citeStyle_(citeStyle) {}
+App::App(bool appState) :
+        appState_(appState) {}
 
 void App::defaultCitation(const std::vector<Book> &books, const CiteStyle &style) {
     App::citeBooks(books, style);

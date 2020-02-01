@@ -11,12 +11,14 @@
 
 class App {
     // Todo Implementation with move or &
-    std::string getCiteElement(Book book, const CiteElement &element);
+    static std::string getCiteElement(Book book, const CiteElement &element);
 
-    void citeBook(const Book &book, CiteStyle style);
+    static void citeBook(const Book &book, CiteStyle style);
+
+    bool appState_;
 
 public:
-    App(bool appState, int citeStyle);
+    explicit App(bool appState = false);
 
     bool quitApp();
 
@@ -24,13 +26,13 @@ public:
 
     void setAppState(const bool &state);
 
-    void citeBooks(const std::vector<Book> &books, const CiteStyle &style);
+    static void citeBooks(const std::vector<Book> &books, const CiteStyle &style);
 
-    void defaultCitation(const std::vector<Book> &books, const CiteStyle &style);
+    static void defaultCitation(const std::vector<Book> &books, const CiteStyle &style);
 
-    Book defineBook();
+    static Book defineBook();
 
-    CiteStyle defineCiteStyle();
+    static CiteStyle defineCiteStyle();
 };
 
 

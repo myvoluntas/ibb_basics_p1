@@ -12,7 +12,6 @@
 // Todo: DB instances in Heap
 BookRepository book_database = BookRepository{};
 CiteStyleRepository citeStyle_database = CiteStyleRepository{};
-App app = App{false, 0};
 
 
 void initBookDB() {
@@ -43,6 +42,7 @@ inline void initCiteDB() {
 
 
 void ExecuteApp::run() {
+    App app = App();
     app.setAppState(true);
     initBookDB();
     ConsoleUtility::options();
@@ -57,7 +57,7 @@ void ExecuteApp::run() {
                 break;
             case 1: {
                 Book book;
-                book = app.defineBook();
+                book = App::defineBook();
                 book_database.store(book);
                 std::cout << " " << std::endl;
                 std::cout << "Danke. Buch gespeichert" << std::endl;
@@ -65,14 +65,14 @@ void ExecuteApp::run() {
                 break;
             }
             case 2: {
-                CiteStyle style = app.defineCiteStyle();
+                CiteStyle style = App::defineCiteStyle();
                 citeStyle_database.store(style);
                 std::cout << " " << std::endl;
                 std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
                 break;
             }
             case 3:
-                app.defaultCitation(book_database.getBooks(), citeStyle_database.getCiteStyleByIndex(0));
+                App::defaultCitation(book_database.getBooks(), citeStyle_database.getCiteStyleByIndex(0));
                 std::cout << " " << std::endl;
                 std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
                 break;
@@ -80,7 +80,7 @@ void ExecuteApp::run() {
                 ConsoleUtility::printCiteStyles(citeStyle_database.getCiteStyles());
                 ConsoleUtility::printMessage(std::cout, "Waehle Zitierstil");
                 int userData = ConsoleUtility::readUserInputNbr();
-                app.citeBooks(book_database.getBooks(),
+                App::citeBooks(book_database.getBooks(),
                               citeStyle_database.getCiteStyleByIndex(userData));
                 std::cout << " " << std::endl;
                 std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
