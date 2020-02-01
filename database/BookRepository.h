@@ -11,7 +11,7 @@
 #include "../domain/Book.h"
 
 
-struct BookRepository {
+class BookRepository {
     std::vector<Book> books;
 public:
     void store(const Book &book);

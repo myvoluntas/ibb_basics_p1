@@ -16,8 +16,7 @@
    - void Widget::drawYourself() const; – Die Methode verändert ihr Objekt nicht.
 */
 
-struct Book {
-private:
+class Book {
     std::string author_;
     std::string publisher_;
     std::string isbn_;

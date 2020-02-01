@@ -8,7 +8,8 @@
 
 #include <istream>
 
-struct ExecuteApp {
+class ExecuteApp {
+public:
     static void run();
 };
 

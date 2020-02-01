@@ -13,8 +13,7 @@
 static bool quit;
 static int citeStyle;
 
-struct App {
-private:
+class App {
     // Todo Implementation with move or &
     static std::string getCiteElement(Book book, const CiteElement &element);
 

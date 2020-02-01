@@ -17,8 +17,7 @@ enum class CiteElement {
     author, publisher, isbn, volume, title, year
 };
 
-struct CiteStyle {
-private:
+class CiteStyle {
     CiteElement firstCiteElement;
     CiteElement secondCiteElement;
     CiteElement thirdCiteElement;
@@ -27,8 +26,6 @@ private:
     CiteElement sixthCiteElement;
 
     std::string citeStyleName;
-
-
 public:
     CiteElement getFirstCiteElement();
 

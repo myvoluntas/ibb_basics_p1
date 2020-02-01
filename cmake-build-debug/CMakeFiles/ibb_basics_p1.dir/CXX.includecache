@@ -66,30 +66,14 @@ vector
 ../domain/Book.h
 /Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.h
 
-/Users/h.gbr/Documents/clion/ibb_basics_p1/database/CiteStyleRepository.cpp
-CiteStyleRepository.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/database/CiteStyleRepository.h
-
 /Users/h.gbr/Documents/clion/ibb_basics_p1/database/CiteStyleRepository.h
 vector
 -
 ../domain/CiteStyle.h
 /Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.h
 
-/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.cpp
-Book.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.h
-utility
--
-
 /Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.h
 string
--
-
-/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.cpp
-CiteStyle.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.h
-vector
 -
 
 /Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.h
@@ -103,4 +87,8 @@ algorithm
 -
 iterator
 -
+
+/Users/h.gbr/Documents/clion/ibb_basics_p1/main.cpp
+app/ExecuteApp.h
+/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ExecuteApp.h
 
