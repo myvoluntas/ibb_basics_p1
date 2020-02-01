@@ -56,10 +56,6 @@ ConsoleUtility.h
 istream
 -
 
-/Users/h.gbr/Documents/clion/ibb_basics_p1/database/BookRepository.cpp
-BookRepository.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/database/BookRepository.h
-
 /Users/h.gbr/Documents/clion/ibb_basics_p1/database/BookRepository.h
 vector
 -
@@ -87,8 +83,4 @@ algorithm
 -
 iterator
 -
-
-/Users/h.gbr/Documents/clion/ibb_basics_p1/main.cpp
-app/ExecuteApp.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ExecuteApp.h
 

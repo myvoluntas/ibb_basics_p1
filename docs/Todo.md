@@ -1,0 +1,4 @@
+- [x] new branch
+- [x] struct -> class
+- [] getCitestyleByIndex(int index) insted citeStyle in App 
+- [ ] get rid of static

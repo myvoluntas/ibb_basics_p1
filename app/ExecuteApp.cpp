@@ -12,6 +12,7 @@
 // Todo: DB instances in Heap
 BookRepository book_database = BookRepository{};
 CiteStyleRepository citeStyle_database = CiteStyleRepository{};
+App app = App{false, 0};
 
 
 void initBookDB() {
@@ -42,47 +43,58 @@ inline void initCiteDB() {
 
 
 void ExecuteApp::run() {
-    int state = App::startApp();
-
+    app.setAppState(true);
     initBookDB();
+    ConsoleUtility::options();
     initCiteDB();
     do {
         std::string inputConsole;
-        ConsoleUtility::options();
         std::getline(std::cin, inputConsole);
         int inputInt = std::stoi(inputConsole);
-
         switch (inputInt) {
             case 0:
-                state = App::quitApp();
+                app.quitApp();
                 break;
             case 1: {
                 Book book;
-                book = App::defineBook();
+                book = app.defineBook();
                 book_database.store(book);
+                std::cout << " " << std::endl;
+                std::cout << "Danke. Buch gespeichert" << std::endl;
+                std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
                 break;
             }
             case 2: {
-                CiteStyle style = App::defineCiteStyle();
+                CiteStyle style = app.defineCiteStyle();
                 citeStyle_database.store(style);
+                std::cout << " " << std::endl;
+                std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
                 break;
             }
             case 3:
-                App::defaultCitation(book_database.getBooks(), citeStyle_database.getCiteStyleByIndex(0));
+                app.defaultCitation(book_database.getBooks(), citeStyle_database.getCiteStyleByIndex(0));
+                std::cout << " " << std::endl;
+                std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
                 break;
             case 4: {
                 ConsoleUtility::printCiteStyles(citeStyle_database.getCiteStyles());
-                App::pickCiteStyle();
-                App::citeBooks(book_database.getBooks(),
-                               citeStyle_database.getCiteStyleByIndex(App::getCiteStyle()));
+                ConsoleUtility::printMessage(std::cout, "Waehle Zitierstil");
+                int userData = ConsoleUtility::readUserInputNbr();
+                app.citeBooks(book_database.getBooks(),
+                              citeStyle_database.getCiteStyleByIndex(userData));
+                std::cout << " " << std::endl;
+                std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
                 break;
             }
             case 5:
                 book_database.deleteBookLIFO();
+                // Todo: Print all books from repo.
+                std::cout << " " << std::endl;
+                std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
                 break;
             default:
                 break;
         }
 
-    } while (state);
+    } while (app.getAppState());
 }

@@ -9,34 +9,28 @@
 #include <ostream>
 #include "../domain/CiteStyle.h"
 
-// Todo next: Get rid of static and implement quit as private field in App class.
-static bool quit;
-static int citeStyle;
-
 class App {
     // Todo Implementation with move or &
-    static std::string getCiteElement(Book book, const CiteElement &element);
+    std::string getCiteElement(Book book, const CiteElement &element);
 
-    static void citeBook(const Book &book, CiteStyle style);
+    void citeBook(const Book &book, CiteStyle style);
 
 public:
-    static bool quitApp();
+    App(bool appState, int citeStyle);
 
-    static bool startApp();
+    bool quitApp();
 
-    static void citeBooks(const std::vector<Book> &books, const CiteStyle &style);
+    bool getAppState();
 
-    static int getCiteStyle();
+    void setAppState(const bool &state);
 
-    static void setCiteStyle(const std::string &index);
+    void citeBooks(const std::vector<Book> &books, const CiteStyle &style);
 
-    static void pickCiteStyle();
+    void defaultCitation(const std::vector<Book> &books, const CiteStyle &style);
 
-    static void defaultCitation(const std::vector<Book> &books, const CiteStyle &style);
+    Book defineBook();
 
-    static Book defineBook();
-
-    static CiteStyle defineCiteStyle();
+    CiteStyle defineCiteStyle();
 };
 
 
