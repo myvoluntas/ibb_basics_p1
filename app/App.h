@@ -38,8 +38,6 @@ public:
     static Book defineBook();
 
     static CiteStyle defineCiteStyle();
-
-
 };
 
 
