@@ -72,39 +72,36 @@ bool App::quitApp() {
 
 Book App::defineBook() {
     Book book = Book();
-
-    ConsoleUtility::printMessage(std::cout, "1/6 Nenne den Autor");
-    const std::string author = ConsoleUtility::readUserInput();
+    const std::string author = ConsoleUtility::readUserInput(
+            "1/6 Nenne den Autor");
     book.setAuthor(author);
 
-
-    ConsoleUtility::printMessage(std::cout, "2/6 Nenne den Verlag");
-    const std::string publisher = ConsoleUtility::readUserInput();
+    const std::string publisher = ConsoleUtility::readUserInput(
+            "2/6 Nenne den Verlag");
     book.setPublisher(publisher);
 
-    ConsoleUtility::printMessage(std::cout, "3/6 Nenne die ISBN");
-    const std::string isbn = ConsoleUtility::readUserInput();
+    const std::string isbn = ConsoleUtility::readUserInput(
+            "3/6 Nenne die ISBN");
     book.setIsbn(isbn);
 
-    ConsoleUtility::printMessage(std::cout, "4/6 Nenne die Auflage/Ausgabe des Buches ");
-    const std::string volume = ConsoleUtility::readUserInput();
+    const std::string volume = ConsoleUtility::readUserInput(
+            "4/6 Nenne die Auflage/Ausgabe des Buches");
     book.setVolume(volume);
 
-    ConsoleUtility::printMessage(std::cout, "5/6 Nenne den Buchtitel");
-    const std::string title = ConsoleUtility::readUserInput();
+    const std::string title = ConsoleUtility::readUserInput(
+            "5/6 Nenne den Buchtitel");
     book.setTitle(title);
 
-    ConsoleUtility::printMessage(std::cout, "6/6 Nenne das Erscheinungsjahr");
-    const std::string year = ConsoleUtility::readUserInput();
+    const std::string year = ConsoleUtility::readUserInput(
+            "6/6 Nenne das Erscheinungsjahr");
     book.setYear(year);
     return book;
 }
 
-
 CiteStyle App::defineCiteStyle() {
     CiteStyle style{};
-    ConsoleUtility::printMessage(std::cout, "Wie soll dein Zitierstil heißen? Beispiel: TU Darmstadt Stil");
-    std::string citeStyleName = ConsoleUtility::readUserInput();
+    std::string citeStyleName = ConsoleUtility::readUserInput(
+            "Wie soll dein Zitierstil heißen? Beispiel: TU Darmstadt Stil");
     style.setCiteStyleName(citeStyleName);
 
     ConsoleUtility::position0();

@@ -9,16 +9,18 @@
 #include "../database/CiteStyleRepository.h"
 #include "ConsoleUtility.h"
 
-// Todo: DB instances in Heap
 BookRepository book_database = BookRepository{};
 CiteStyleRepository citeStyle_database = CiteStyleRepository{};
 
 
 void initBookDB() {
     //book_database.books.reserve(10);
-    Book book1{"Daniel Kahnemann", "Fischer Verlag", "978-435-123", "1", "Schnelles Denken, Langsames Denken", "2015"};
-    Book book2{"Torsten t. Will", "Rheinwerk", "978-3836243605", "1", "c++: Das umfassende Handbuch", "2018"};
-    Book book3{"Scott Meyers", "O' Reilly", "978-526-423", "1", "Effective Modern C++", "2019"};
+    Book book1{"Daniel Kahnemann", "Fischer Verlag",
+               "978-435-123", "1", "Schnelles Denken, Langsames Denken", "2015"};
+    Book book2{"Torsten t. Will", "Rheinwerk",
+               "978-3836243605", "1", "c++: Das umfassende Handbuch", "2018"};
+    Book book3{"Scott Meyers", "O' Reilly",
+               "978-526-423", "1", "Effective Modern C++", "2019"};
 
     std::vector<Book> defaultBooks{book1, book2, book3};
 
@@ -39,12 +41,11 @@ inline void initCiteDB() {
 
     citeStyle_database.store(harvard);
 }
-
-
 void ExecuteApp::run() {
     App app = App();
     app.setAppState(true);
     initBookDB();
+
     ConsoleUtility::options();
     initCiteDB();
     do {

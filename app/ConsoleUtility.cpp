@@ -11,13 +11,13 @@ void ConsoleUtility::printMessage(std::ostream &os, const std::string &message) 
     os << message << std::endl;
 }
 
-std::string ConsoleUtility::readUserInput() {
+std::string ConsoleUtility::readUserInput(const std::string &message) {
     std::string input{};
+    printMessage(std::cout, message);
     std::getline(std::cin, input);
     return input;
 }
 
-// Todo Templates/Generics
 int ConsoleUtility::readUserInputNbr() {
     std::string input{};
     std::getline(std::cin, input);
@@ -31,7 +31,7 @@ void ConsoleUtility::position0() {
 }
 
 void ConsoleUtility::position1() {
-    std::string option1 = " 2/6 [_____, #####, _____, _____, _____, _____]";
+    std::string option1 = "2/6 [_____, #####, _____, _____, _____, _____]";
     printMessage(std::cout, option1);
 }
 
@@ -60,7 +60,8 @@ void ConsoleUtility::position5() {
 }
 
 void ConsoleUtility::citeElementOptions() {
-    printMessage(std::cout, "Welches Buchelement soll die markierte Zitatstelle belegen?");
+    printMessage(std::cout,
+            "Welches Buchelement soll die markierte Zitatstelle belegen?");
     printMessage(std::cout, " ");
     printMessage(std::cout, "Buchelemente:");
     printMessage(std::cout, "[1] <- Autor");

@@ -5,11 +5,11 @@
 #ifndef IBB_BASICS_P1_CONSOLEUTILITY_H
 #define IBB_BASICS_P1_CONSOLEUTILITY_H
 
-struct ConsoleUtility {
-
+class ConsoleUtility {
+public:
     static void printMessage(std::ostream &os, const std::string &message);
 
-    static std::string readUserInput();
+    static std::string readUserInput(const std::string &message);
 
     static int readUserInputNbr();
 
