@@ -10,8 +10,7 @@
 Book::Book(std::string author, std::string publisher,
            std::string isbn, std::string volume, std::string title, std::string year) :
         author_(std::move(author)), publisher_(std::move(publisher)), isbn_(std::move(isbn)),
-        volume_(std::move(volume)), title_(std::move(title)), year_(std::move(year)) {
-}
+        volume_(std::move(volume)), title_(std::move(title)), year_(std::move(year)) {}
 
 
 // Setter

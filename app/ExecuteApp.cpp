@@ -29,6 +29,7 @@ void initBookDB() {
     }
 }
 
+// Das ist ein Test
 inline void initCiteDB() {
     CiteStyle harvard;
     harvard.setCiteStyleName("Harvard Citestyle (Pseudo)");
@@ -41,6 +42,7 @@ inline void initCiteDB() {
 
     citeStyle_database.store(harvard);
 }
+
 void ExecuteApp::run() {
     App app = App();
     app.setAppState(true);
@@ -62,13 +64,14 @@ void ExecuteApp::run() {
                 book_database.store(book);
                 std::cout << " " << std::endl;
                 std::cout << "Danke. Buch gespeichert" << std::endl;
-                std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
+                std::cout << "Du kannst wieder zwischen den App Funktionen waehlen!" << std::endl;
                 break;
             }
             case 2: {
                 CiteStyle style = App::defineCiteStyle();
                 citeStyle_database.store(style);
                 std::cout << " " << std::endl;
+                // Todo DRY
                 std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
                 break;
             }
@@ -82,7 +85,7 @@ void ExecuteApp::run() {
                 ConsoleUtility::printMessage(std::cout, "Waehle Zitierstil");
                 int userData = ConsoleUtility::readUserInputNbr();
                 App::citeBooks(book_database.getBooks(),
-                              citeStyle_database.getCiteStyleByIndex(userData));
+                               citeStyle_database.getCiteStyleByIndex(userData));
                 std::cout << " " << std::endl;
                 std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
                 break;

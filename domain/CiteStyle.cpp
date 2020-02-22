@@ -5,6 +5,9 @@
 #include "CiteStyle.h"
 #include <vector>
 
+CiteStyle::CiteStyle(std::string citeStyleName) :  citeStyleName_(
+        std::move(citeStyleName)) {}
+
 CiteElement CiteStyle::getFirstCiteElement() {
     return firstCiteElement;
 }
@@ -180,11 +183,11 @@ void CiteStyle::setSixthCiteElement(int n) {
 }
 
 void CiteStyle::setCiteStyleName(const std::string &citeName) {
-    citeStyleName = citeName;
+    citeStyleName_ = citeName;
 }
 
 std::string CiteStyle::getCiteStyleName() {
-    return citeStyleName;
+    return citeStyleName_;
 }
 
 

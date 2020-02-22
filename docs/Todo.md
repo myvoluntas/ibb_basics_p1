@@ -1,4 +1,5 @@
 - [x] new branch
 - [x] struct -> class
-- [] getCitestyleByIndex(int index) insted citeStyle in App 
-- [ ] get rid of static
+- [x] getCitestyleByIndex(int index) insted citeStyle in App 
+- [x] get rid of static
+- [x] German language in clion

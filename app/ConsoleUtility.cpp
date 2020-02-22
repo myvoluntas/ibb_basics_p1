@@ -5,8 +5,31 @@
 #include <iostream>
 #include "App.h"
 #include "ConsoleUtility.h"
+#include <vector>
 
-//Todo
+
+ConsoleUtility::ConsoleUtility(){
+    //             5     12     19     26     33     40
+    //       0123456789012345678901234567890123456789012345
+    option="0/6 [_____, _____, _____, _____, _____, _____]";
+    a__=1;
+    i__=0;
+}
+
+void ConsoleUtility::position(ConsoleUtility* point, char value, int pos){
+    point->i__=pos;
+    point->a__=1;
+
+    point->option[0]=value;
+
+    while(point->a__<6){
+        point->option[point->i__]='#';
+        point->i__++;
+        point->a__++;
+    }
+}
+
+//Todo Try catch handling
 void ConsoleUtility::printMessage(std::ostream &os, const std::string &message) {
     os << message << std::endl;
 }
@@ -23,6 +46,15 @@ int ConsoleUtility::readUserInputNbr() {
     std::getline(std::cin, input);
     return std::stoi(input);
 }
+
+//void ConsoleUtility::position(std::ostream &os, const std::string &step, const int &citeIndex) {
+//    std::vector<std::string> positionToSet = {"_____", "_____", "_____", "_____", "_____", "_____"};
+//    positionToSet.insert(positionToSet.begin() + citeIndex, "#####");
+// need to loop over positionToSet
+//    std::cout << step << "[" << positionToSet << "]" << std::endl;
+//}
+
+
 
 void ConsoleUtility::position0() {
     printMessage(std::cout, " ");
@@ -61,20 +93,20 @@ void ConsoleUtility::position5() {
 
 void ConsoleUtility::citeElementOptions() {
     printMessage(std::cout,
-            "Welches Buchelement soll die markierte Zitatstelle belegen?");
+                 "Welches Buchelement soll die markierte Zitatstelle belegen?");
     printMessage(std::cout, " ");
     printMessage(std::cout, "Buchelemente:");
-    printMessage(std::cout, "[1] <- Autor");
-    printMessage(std::cout, "[2] <- Verlag");
-    printMessage(std::cout, "[3] <- ISBN");
-    printMessage(std::cout, "[4] <- Ausgabe");
-    printMessage(std::cout, "[5] <- Buchtitel");
-    printMessage(std::cout, "[6] <- Jahr");
+    printMessage(std::cout, "Autor     -> [1]");
+    printMessage(std::cout, "Verlag    -> [2]");
+    printMessage(std::cout, "ISBN      -> [3]");
+    printMessage(std::cout, "Ausgabe   -> [4]");
+    printMessage(std::cout, "Buchtitel -> [5]");
+    printMessage(std::cout, "Jahr      -> [6]");
 }
 
 void ConsoleUtility::options() {
     printMessage(std::cout, "-------------------------------------------------");
-    printMessage(std::cout, "Dir stehen folgende Funktionen zur Auswahl:");
+    printMessage(std::cout, "Dir stehen folgende App Funktionen zur Auswahl:");
     printMessage(std::cout, "[0] <- App beenden");
     printMessage(std::cout, "[1] <- Ein neues Buch speichern");
     printMessage(std::cout, "[2] <- Einen eigenen Zitierstil definieren");

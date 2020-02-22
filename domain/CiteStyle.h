@@ -15,6 +15,7 @@
 
 enum class CiteElement {
     author, publisher, isbn, volume, title, year
+
 };
 
 class CiteStyle {
@@ -25,8 +26,12 @@ class CiteStyle {
     CiteElement fifthCiteElement;
     CiteElement sixthCiteElement;
 
-    std::string citeStyleName;
+    std::string citeStyleName_;
+
+//    std::vector<CiteElement> cite_;
 public:
+    explicit CiteStyle( std::string citeStyleName = " " );
+
     CiteElement getFirstCiteElement();
 
     CiteElement getSecondCiteElement();

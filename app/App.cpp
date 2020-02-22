@@ -9,13 +9,13 @@
 #include "../database/BookRepository.h"
 #include "ConsoleUtility.h"
 
-
 App::App(bool appState) :
         appState_(appState) {}
 
 void App::defaultCitation(const std::vector<Book> &books, const CiteStyle &style) {
     App::citeBooks(books, style);
 }
+
 
 std::string App::getCiteElement(Book book, const CiteElement &element) {
     switch (element) {
@@ -31,8 +31,8 @@ std::string App::getCiteElement(Book book, const CiteElement &element) {
             return book.getVolume();
         case CiteElement::year:
             return book.getYear();
-        default:
-            break;
+//        default:
+//            break;
     }
 }
 
@@ -64,7 +64,6 @@ void App::setAppState(const bool &state) {
     appState_ = state;
 }
 
-
 bool App::quitApp() {
     appState_ = false;
     return appState_;
@@ -75,6 +74,7 @@ Book App::defineBook() {
     const std::string author = ConsoleUtility::readUserInput(
             "1/6 Nenne den Autor");
     book.setAuthor(author);
+
 
     const std::string publisher = ConsoleUtility::readUserInput(
             "2/6 Nenne den Verlag");
@@ -99,41 +99,77 @@ Book App::defineBook() {
 }
 
 CiteStyle App::defineCiteStyle() {
+    ConsoleUtility printElementPosition[6];
     CiteStyle style{};
     std::string citeStyleName = ConsoleUtility::readUserInput(
             "Wie soll dein Zitierstil heißen? Beispiel: TU Darmstadt Stil");
+
     style.setCiteStyleName(citeStyleName);
 
-    ConsoleUtility::position0();
+    printElementPosition[0].position(&printElementPosition[0], '1', 5);
+    std::cout << printElementPosition[0].option << "\n";
+
+
     ConsoleUtility::citeElementOptions();
+
     int firstUserInput = ConsoleUtility::readUserInputNbr();
     style.setFirstCiteElement(firstUserInput);
 
-    ConsoleUtility::position1();
+//    ConsoleUtility::position1();
+
+    printElementPosition[1].position(&printElementPosition[1], '2', 12);
+    std::cout << printElementPosition[1].option << "\n";
+
     ConsoleUtility::citeElementOptions();
     int secondUserInput = ConsoleUtility::readUserInputNbr();
     style.setSecondCiteElement(secondUserInput);
 
 
-    ConsoleUtility::position2();
+    printElementPosition[2].position(&printElementPosition[2], '3', 19);
+
+    std::cout << printElementPosition[2].option << "\n";
     ConsoleUtility::citeElementOptions();
     int thirdUserInput = ConsoleUtility::readUserInputNbr();
     style.setThirdCiteElement(thirdUserInput);
 
-    ConsoleUtility::position3();
+
+    printElementPosition[3].position(&printElementPosition[3], '4', 26);
+
+    std::cout << printElementPosition[3].option << "\n";
     ConsoleUtility::citeElementOptions();
     int fourthUserInput = ConsoleUtility::readUserInputNbr();
     style.setFourthCiteElement(fourthUserInput);
 
-    ConsoleUtility::position4();
+
+    printElementPosition[4].position(&printElementPosition[4], '5', 33);
+
+    std::cout << printElementPosition[4].option << "\n";
     ConsoleUtility::citeElementOptions();
     int fifthUserInput = ConsoleUtility::readUserInputNbr();
     style.setFifthCiteElement(fifthUserInput);
 
-    ConsoleUtility::position5();
+
+    printElementPosition[5].position(&printElementPosition[5], '6', 40);
+
+    std::cout << printElementPosition[5].option << "\n";
     ConsoleUtility::citeElementOptions();
     int sixthUserInput = ConsoleUtility::readUserInputNbr();
     style.setSixthCiteElement(sixthUserInput);
 
     return style;
 }
+
+//CiteStyle App::defineStyleToCite() {
+//    CiteStyle style{};
+//    int index{0};
+//    std::string citeStyleName = ConsoleUtility::readUserInput(
+//            "Wie soll dein Zitierstil heißen? Beispiel: TU Darmstadt Stil");
+//
+//    style.setCiteStyleName(citeStyleName);
+//    ConsoleUtility::citeElementOptions();
+//    while (index < 6) {
+//        ConsoleUtility::citeElementPosition(index);
+//        int userInput = ConsoleUtility::readUserInputNbr();
+//
+//}
+//    }
