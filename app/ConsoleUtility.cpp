@@ -8,22 +8,20 @@
 #include <vector>
 
 
-ConsoleUtility::ConsoleUtility(){
-    //             5     12     19     26     33     40
-    //       0123456789012345678901234567890123456789012345
-    option="0/6 [_____, _____, _____, _____, _____, _____]";
-    a__=1;
-    i__=0;
+ConsoleUtility::ConsoleUtility() {
+    option = "0/6 [_____, _____, _____, _____, _____, _____]";
+    a__ = 1;
+    i__ = 0;
 }
 
-void ConsoleUtility::position(ConsoleUtility* point, char value, int pos){
-    point->i__=pos;
-    point->a__=1;
+void ConsoleUtility::position(ConsoleUtility *point, char value, int pos) {
+    point->i__ = pos;
+    point->a__ = 1;
 
-    point->option[0]=value;
+    point->option[0] = value;
 
-    while(point->a__<6){
-        point->option[point->i__]='#';
+    while (point->a__ < 6) {
+        point->option[point->i__] = '#';
         point->i__++;
         point->a__++;
     }
@@ -47,6 +45,37 @@ int ConsoleUtility::readUserInputNbr() {
     return std::stoi(input);
 }
 
+int ConsoleUtility::readUserInputAppFunctionality() {
+    std::string input{};
+    std::getline(std::cin, input);
+    int inputAsNumber = std::stoi(input);
+    try {
+        if (inputAsNumber < 0 || inputAsNumber > 5) {
+//            return inputAsNumber;
+            throw (7);//("Zahl ausserhalb des gueltigen Bereichs")
+        } else return inputAsNumber;
+    } catch (int errorCode) {
+        std::cout << errorCode << std::endl;
+        std::cout << "Geben Sie eine Zahl zwischen 0 und 5 ein." << std::endl;
+    }
+}
+
+int ConsoleUtility::readsUsrInputToPicCiteStyle(int sizeOfCiteStyles) {
+    std::string input{};
+    std::getline(std::cin, input);
+    int inputAsNumber = std::stoi(input);
+    try {
+        if (inputAsNumber < 0 || inputAsNumber > sizeOfCiteStyles) {
+//            return inputAsNumber;
+            throw (7);//("Zahl ausserhalb des gueltigen Bereichs")
+        } else return inputAsNumber;
+    } catch (int errorCode) {
+        std::cout << errorCode << std::endl;
+        std::cout << "Geben Sie eine Zahl zwischen 0 und " << sizeOfCiteStyles << " ein." << std::endl;
+    }
+
+
+}
 //void ConsoleUtility::position(std::ostream &os, const std::string &step, const int &citeIndex) {
 //    std::vector<std::string> positionToSet = {"_____", "_____", "_____", "_____", "_____", "_____"};
 //    positionToSet.insert(positionToSet.begin() + citeIndex, "#####");
@@ -54,42 +83,6 @@ int ConsoleUtility::readUserInputNbr() {
 //    std::cout << step << "[" << positionToSet << "]" << std::endl;
 //}
 
-
-
-void ConsoleUtility::position0() {
-    printMessage(std::cout, " ");
-    std::string option0 = "1/6 [#####, _____, _____, _____, _____, _____]";
-    printMessage(std::cout, option0);
-}
-
-void ConsoleUtility::position1() {
-    std::string option1 = "2/6 [_____, #####, _____, _____, _____, _____]";
-    printMessage(std::cout, option1);
-}
-
-void ConsoleUtility::position2() {
-    std::string option2 = "3/6 [_____, _____, #####, _____, _____, _____]";
-    printMessage(std::cout, option2);
-
-}
-
-void ConsoleUtility::position3() {
-    std::string option3 = "4/6 [_____, _____, _____, #####, _____, _____]";
-    printMessage(std::cout, option3);
-
-}
-
-void ConsoleUtility::position4() {
-    std::string option4 = "5/6 [_____, _____, _____, _____, #####, _____]";
-    printMessage(std::cout, option4);
-
-}
-
-void ConsoleUtility::position5() {
-    std::string option5 = "6/6 [_____, _____, _____, _____, _____, #####]";
-    printMessage(std::cout, option5);
-
-}
 
 void ConsoleUtility::citeElementOptions() {
     printMessage(std::cout,

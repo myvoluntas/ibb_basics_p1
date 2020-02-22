@@ -20,3 +20,6 @@ void BookRepository::deleteBookLIFO() {
 std::string BookRepository::getBookById(int id) {
     return books[id].getPublisher();
 }
+bool BookRepository::isBooksEmpty() {
+    return books.empty();
+}

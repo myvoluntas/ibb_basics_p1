@@ -6,33 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/Users/h.gbr/Documents/clion/ibb_basics_p1/app/App.cpp
-iostream
--
-App.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/app/App.h
-../domain/Book.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.h
-../domain/CiteStyle.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.h
-../database/BookRepository.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/database/BookRepository.h
-ConsoleUtility.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.h
-
 /Users/h.gbr/Documents/clion/ibb_basics_p1/app/App.h
 ostream
 -
 ../domain/CiteStyle.h
 /Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.h
 
+/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.cpp
+string
+-
+iostream
+-
+App.h
+/Users/h.gbr/Documents/clion/ibb_basics_p1/app/App.h
+ConsoleUtility.h
 /Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.h
-
-/Users/h.gbr/Documents/clion/ibb_basics_p1/database/BookRepository.h
 vector
 -
-../domain/Book.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.h
+
+/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.h
 
 /Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.h
 string

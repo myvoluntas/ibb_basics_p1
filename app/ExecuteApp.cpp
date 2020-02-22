@@ -51,9 +51,7 @@ void ExecuteApp::run() {
     ConsoleUtility::options();
     initCiteDB();
     do {
-        std::string inputConsole;
-        std::getline(std::cin, inputConsole);
-        int inputInt = std::stoi(inputConsole);
+        int inputInt = ConsoleUtility::readUserInputAppFunctionality();
         switch (inputInt) {
             case 0:
                 app.quitApp();
@@ -71,31 +69,53 @@ void ExecuteApp::run() {
                 CiteStyle style = App::defineCiteStyle();
                 citeStyle_database.store(style);
                 std::cout << " " << std::endl;
-                // Todo DRY
                 std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
                 break;
             }
-            case 3:
+            case 3: {
                 App::defaultCitation(book_database.getBooks(), citeStyle_database.getCiteStyleByIndex(0));
                 std::cout << " " << std::endl;
                 std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
                 break;
+            }
             case 4: {
                 ConsoleUtility::printCiteStyles(citeStyle_database.getCiteStyles());
                 ConsoleUtility::printMessage(std::cout, "Waehle Zitierstil");
-                int userData = ConsoleUtility::readUserInputNbr();
-                App::citeBooks(book_database.getBooks(),
-                               citeStyle_database.getCiteStyleByIndex(userData));
-                std::cout << " " << std::endl;
-                std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
+                try {
+
+                    int userData = ConsoleUtility::readUserInputNbr();
+                    if (userData < citeStyle_database.lengthCiteStyles()) {
+                        App::citeBooks(book_database.getBooks(),
+                                       citeStyle_database.getCiteStyleByIndex(userData));
+                        std::cout << " " << std::endl;
+                        std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
+                    } else throw (4);
+
+                }
+                catch (int errorCode) {
+                    std::cout << "Deine Auswahl wurde nicht gefunden." << " error code: " << errorCode
+                              << std::endl;
+                    std::cout << "Waehle erneut zwischen den App Funktionen waehlen!" << std::endl;
+                    break;
+                }
+
                 break;
             }
             case 5:
-                book_database.deleteBookLIFO();
-                // Todo: Print all books from repo.
-                std::cout << " " << std::endl;
-                std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
-                break;
+                try {
+                    if (!book_database.isBooksEmpty()) {
+                        book_database.deleteBookLIFO();
+                        // Todo: Print all books from repo.
+                        std::cout << " " << std::endl;
+                        std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
+                    } else throw (5);
+                }
+                catch (int errorCode) {
+                    std::cout << "Deine Buchdatenbank ist leer. Drucke die 1 um ein neues Buch zu speichern."
+                              << std::endl;
+                    std::cout << " error code: " << errorCode << std::endl;
+                    break;
+                }
             default:
                 break;
         }

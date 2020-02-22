@@ -106,7 +106,7 @@ CiteStyle App::defineCiteStyle() {
 
     style.setCiteStyleName(citeStyleName);
 
-    printElementPosition[0].position(&printElementPosition[0], '1', 5);
+    ConsoleUtility::position(&printElementPosition[0], '1', 5);
     std::cout << printElementPosition[0].option << "\n";
 
 
@@ -117,7 +117,8 @@ CiteStyle App::defineCiteStyle() {
 
 //    ConsoleUtility::position1();
 
-    printElementPosition[1].position(&printElementPosition[1], '2', 12);
+    ConsoleUtility::position(&printElementPosition[1], '2', 12);
+
     std::cout << printElementPosition[1].option << "\n";
 
     ConsoleUtility::citeElementOptions();
@@ -125,7 +126,7 @@ CiteStyle App::defineCiteStyle() {
     style.setSecondCiteElement(secondUserInput);
 
 
-    printElementPosition[2].position(&printElementPosition[2], '3', 19);
+    ConsoleUtility::position(&printElementPosition[2], '3', 19);
 
     std::cout << printElementPosition[2].option << "\n";
     ConsoleUtility::citeElementOptions();
@@ -133,7 +134,7 @@ CiteStyle App::defineCiteStyle() {
     style.setThirdCiteElement(thirdUserInput);
 
 
-    printElementPosition[3].position(&printElementPosition[3], '4', 26);
+    ConsoleUtility::position(&printElementPosition[3], '4', 26);
 
     std::cout << printElementPosition[3].option << "\n";
     ConsoleUtility::citeElementOptions();
@@ -141,7 +142,7 @@ CiteStyle App::defineCiteStyle() {
     style.setFourthCiteElement(fourthUserInput);
 
 
-    printElementPosition[4].position(&printElementPosition[4], '5', 33);
+    ConsoleUtility::position(&printElementPosition[4], '5', 33);
 
     std::cout << printElementPosition[4].option << "\n";
     ConsoleUtility::citeElementOptions();
@@ -149,7 +150,7 @@ CiteStyle App::defineCiteStyle() {
     style.setFifthCiteElement(fifthUserInput);
 
 
-    printElementPosition[5].position(&printElementPosition[5], '6', 40);
+    ConsoleUtility::position(&printElementPosition[5], '6', 40);
 
     std::cout << printElementPosition[5].option << "\n";
     ConsoleUtility::citeElementOptions();

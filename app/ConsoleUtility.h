@@ -15,6 +15,7 @@ public:
     ConsoleUtility();
 
     std::string option;
+
     static void position(ConsoleUtility *point, char value, int pos);
 
     static void printMessage(std::ostream &os, const std::string &message);
@@ -23,19 +24,9 @@ public:
 
     static int readUserInputNbr();
 
+    static int readUserInputAppFunctionality();
 
-    static void position0();
-
-    static void position1();
-
-    static void position2();
-
-    static void position3();
-
-    static void position4();
-
-    static void position5();
-
+    static int readsUsrInputToPicCiteStyle(int sizeOfCiteStyles);
     static void citeElementOptions();
 
     static void options();

@@ -15,7 +15,7 @@ class BookRepository {
     std::vector<Book> books;
 public:
     void store(const Book &book);
-
+    bool isBooksEmpty();
     std::vector<Book> getBooks();
 
     void deleteBookLIFO();
