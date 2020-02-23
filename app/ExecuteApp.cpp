@@ -89,7 +89,7 @@ void ExecuteApp::run() {
                                    citeStyle_database.getCiteStyleByIndex(userData));
                     std::cout << " " << std::endl;
                     std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
-                } catch (int errorCode) {
+                } catch (int &errorCode) {
 
                     std::cout << "Deine Auswahl wurde nicht gefunden." << " error code: " << errorCode
                               << std::endl;
@@ -106,7 +106,7 @@ void ExecuteApp::run() {
                         std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
                     } else throw (42);
                 }
-                catch (int errorCode) {
+                catch (int &errorCode) {
                     std::cout << "Deine Buchdatenbank ist leer. Drucke die 1 um ein neues Buch zu speichern."
                               << std::endl;
                     std::cout << " error code: " << errorCode << std::endl;

@@ -12,37 +12,19 @@ ostream
 ../domain/CiteStyle.h
 /Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.h
 
-/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.h
-
-/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ExecuteApp.cpp
+/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.cpp
+string
+-
 iostream
 -
-ExecuteApp.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ExecuteApp.h
 App.h
 /Users/h.gbr/Documents/clion/ibb_basics_p1/app/App.h
-../database/BookRepository.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/database/BookRepository.h
-../database/CiteStyleRepository.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/database/CiteStyleRepository.h
 ConsoleUtility.h
 /Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.h
-
-/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ExecuteApp.h
-istream
--
-
-/Users/h.gbr/Documents/clion/ibb_basics_p1/database/BookRepository.h
 vector
 -
-../domain/Book.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.h
 
-/Users/h.gbr/Documents/clion/ibb_basics_p1/database/CiteStyleRepository.h
-vector
--
-../domain/CiteStyle.h
-/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.h
+/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.h
 
 /Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.h
 string

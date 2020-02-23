@@ -54,12 +54,13 @@ int ConsoleUtility::readUserInputAppFunctionality() {
 //            return inputAsNumber;
             throw (7);//("Zahl ausserhalb des gueltigen Bereichs")
         } else return inputAsNumber;
-    } catch (int errorCode) {
+    } catch (int &errorCode) {
         std::cout << errorCode << std::endl;
         std::cout << "Geben Sie eine Zahl zwischen 0 und 5 ein." << std::endl;
-        return 0;
+        //return 0;
     }
 }
+
 
 int ConsoleUtility::readsUsrInputToPicCiteStyle(int sizeOfCiteStyles) {
     std::string input{};
