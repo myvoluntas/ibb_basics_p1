@@ -81,24 +81,20 @@ void ExecuteApp::run() {
             case 4: {
                 ConsoleUtility::printCiteStyles(citeStyle_database.getCiteStyles());
                 ConsoleUtility::printMessage(std::cout, "Waehle Zitierstil");
+
+                int sizeOfCiteStyles = citeStyle_database.lengthCiteStyles();
                 try {
+                    int userData = ConsoleUtility::readsUsrInputToPicCiteStyle(sizeOfCiteStyles);
+                    App::citeBooks(book_database.getBooks(),
+                                   citeStyle_database.getCiteStyleByIndex(userData));
+                    std::cout << " " << std::endl;
+                    std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
+                } catch (int errorCode) {
 
-                    int userData = ConsoleUtility::readUserInputNbr();
-                    if (userData < citeStyle_database.lengthCiteStyles()) {
-                        App::citeBooks(book_database.getBooks(),
-                                       citeStyle_database.getCiteStyleByIndex(userData));
-                        std::cout << " " << std::endl;
-                        std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
-                    } else throw (4);
-
-                }
-                catch (int errorCode) {
                     std::cout << "Deine Auswahl wurde nicht gefunden." << " error code: " << errorCode
                               << std::endl;
                     std::cout << "Waehle erneut zwischen den App Funktionen waehlen!" << std::endl;
-                    break;
                 }
-
                 break;
             }
             case 5:
@@ -108,7 +104,7 @@ void ExecuteApp::run() {
                         // Todo: Print all books from repo.
                         std::cout << " " << std::endl;
                         std::cout << "Du kannst zwischen den App Funktionen waehlen!" << std::endl;
-                    } else throw (5);
+                    } else throw (42);
                 }
                 catch (int errorCode) {
                     std::cout << "Deine Buchdatenbank ist leer. Drucke die 1 um ein neues Buch zu speichern."

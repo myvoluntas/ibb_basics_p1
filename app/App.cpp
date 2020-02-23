@@ -159,18 +159,3 @@ CiteStyle App::defineCiteStyle() {
 
     return style;
 }
-
-//CiteStyle App::defineStyleToCite() {
-//    CiteStyle style{};
-//    int index{0};
-//    std::string citeStyleName = ConsoleUtility::readUserInput(
-//            "Wie soll dein Zitierstil heißen? Beispiel: TU Darmstadt Stil");
-//
-//    style.setCiteStyleName(citeStyleName);
-//    ConsoleUtility::citeElementOptions();
-//    while (index < 6) {
-//        ConsoleUtility::citeElementPosition(index);
-//        int userInput = ConsoleUtility::readUserInputNbr();
-//
-//}
-//    }

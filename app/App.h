@@ -33,7 +33,6 @@ public:
     static Book defineBook();
 
     static CiteStyle defineCiteStyle();
-    static CiteStyle defineStyleToCite();
 };
 
 

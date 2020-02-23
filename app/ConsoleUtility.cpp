@@ -57,6 +57,7 @@ int ConsoleUtility::readUserInputAppFunctionality() {
     } catch (int errorCode) {
         std::cout << errorCode << std::endl;
         std::cout << "Geben Sie eine Zahl zwischen 0 und 5 ein." << std::endl;
+        return 0;
     }
 }
 
@@ -64,18 +65,11 @@ int ConsoleUtility::readsUsrInputToPicCiteStyle(int sizeOfCiteStyles) {
     std::string input{};
     std::getline(std::cin, input);
     int inputAsNumber = std::stoi(input);
-    try {
-        if (inputAsNumber < 0 || inputAsNumber > sizeOfCiteStyles) {
-//            return inputAsNumber;
-            throw (7);//("Zahl ausserhalb des gueltigen Bereichs")
-        } else return inputAsNumber;
-    } catch (int errorCode) {
-        std::cout << errorCode << std::endl;
-        std::cout << "Geben Sie eine Zahl zwischen 0 und " << sizeOfCiteStyles << " ein." << std::endl;
-    }
-
-
+    if (inputAsNumber < 0 || inputAsNumber >= sizeOfCiteStyles) {
+        throw (42);
+    } else return inputAsNumber;
 }
+
 //void ConsoleUtility::position(std::ostream &os, const std::string &step, const int &citeIndex) {
 //    std::vector<std::string> positionToSet = {"_____", "_____", "_____", "_____", "_____", "_____"};
 //    positionToSet.insert(positionToSet.begin() + citeIndex, "#####");

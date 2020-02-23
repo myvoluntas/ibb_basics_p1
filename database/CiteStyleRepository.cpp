@@ -17,7 +17,6 @@ CiteStyle CiteStyleRepository::getCiteStyleByIndex(const int &index) {
     return citeStyles[index];
 }
 
-// Todo not used
 int CiteStyleRepository::lengthCiteStyles() {
     return citeStyles.size();
 }
