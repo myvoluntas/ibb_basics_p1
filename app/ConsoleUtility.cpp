@@ -14,19 +14,6 @@ ConsoleUtility::ConsoleUtility() {
     i__ = 0;
 }
 
-void ConsoleUtility::position(ConsoleUtility *point, char value, int pos) {
-    point->i__ = pos;
-    point->a__ = 1;
-
-    point->option[0] = value;
-
-    while (point->a__ < 6) {
-        point->option[point->i__] = '#';
-        point->i__++;
-        point->a__++;
-    }
-}
-
 //Todo Try catch handling
 void ConsoleUtility::printMessage(std::ostream &os, const std::string &message) {
     os << message << std::endl;
@@ -45,6 +32,19 @@ int ConsoleUtility::readUserInputNbr() {
     return std::stoi(input);
 }
 
+void ConsoleUtility::position(ConsoleUtility *point, char value, int pos) {
+    point->i__ = pos;
+    point->a__ = 1;
+
+    point->option[0] = value;
+
+    while (point->a__ < 6) {
+        point->option[point->i__] = '#';
+        point->i__++;
+        point->a__++;
+    }
+}
+
 int ConsoleUtility::readUserInputAppFunctionality() {
     std::string input{};
     std::getline(std::cin, input);
@@ -57,7 +57,7 @@ int ConsoleUtility::readUserInputAppFunctionality() {
     } catch (int &errorCode) {
         std::cout << errorCode << std::endl;
         std::cout << "Geben Sie eine Zahl zwischen 0 und 5 ein." << std::endl;
-        //return 0;
+//        return 0;
     }
 }
 
