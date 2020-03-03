@@ -1,0 +1,118 @@
+Index: app/ConsoleUtility.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\n// Created by Guber on 28.01.20.\n//\n#include <string>\n#include <iostream>\n#include \"App.h\"\n#include \"ConsoleUtility.h\"\n#include <vector>\n\n\nConsoleUtility::ConsoleUtility() {\n    option = \"0/6 [_____, _____, _____, _____, _____, _____]\";\n    a__ = 1;\n    i__ = 0;\n}\n\nvoid ConsoleUtility::position(ConsoleUtility *point, char value, int pos) {\n    point->i__ = pos;\n    point->a__ = 1;\n\n    point->option[0] = value;\n\n    while (point->a__ < 6) {\n        point->option[point->i__] = '#';\n        point->i__++;\n        point->a__++;\n    }\n}\n\n//Todo Try catch handling\nvoid ConsoleUtility::printMessage(std::ostream &os, const std::string &message) {\n    os << message << std::endl;\n}\n\nstd::string ConsoleUtility::readUserInput(const std::string &message) {\n    std::string input{};\n    printMessage(std::cout, message);\n    std::getline(std::cin, input);\n    return input;\n}\n\nint ConsoleUtility::readUserInputNbr() {\n    std::string input{};\n    std::getline(std::cin, input);\n    return std::stoi(input);\n}\n\nint ConsoleUtility::readUserInputAppFunctionality() {\n    std::string input{};\n    std::getline(std::cin, input);\n    int inputAsNumber = std::stoi(input);\n    try {\n        if (inputAsNumber < 0 || inputAsNumber > 5) {\n//            return inputAsNumber;\n            throw (7);//(\"Zahl ausserhalb des gueltigen Bereichs\")\n        } else return inputAsNumber;\n    } catch (int &errorCode) {\n        std::cout << errorCode << std::endl;\n        std::cout << \"Geben Sie eine Zahl zwischen 0 und 5 ein.\" << std::endl;\n        //return 0;\n    }\n}\n\n\nint ConsoleUtility::readsUsrInputToPicCiteStyle(int sizeOfCiteStyles) {\n    std::string input{};\n    std::getline(std::cin, input);\n    int inputAsNumber = std::stoi(input);\n    if (inputAsNumber < 0 || inputAsNumber >= sizeOfCiteStyles) {\n        throw (42);\n    } else return inputAsNumber;\n}\n\n//void ConsoleUtility::position(std::ostream &os, const std::string &step, const int &citeIndex) {\n//    std::vector<std::string> positionToSet = {\"_____\", \"_____\", \"_____\", \"_____\", \"_____\", \"_____\"};\n//    positionToSet.insert(positionToSet.begin() + citeIndex, \"#####\");\n// need to loop over positionToSet\n//    std::cout << step << \"[\" << positionToSet << \"]\" << std::endl;\n//}\n\n\nvoid ConsoleUtility::citeElementOptions() {\n    printMessage(std::cout,\n                 \"Welches Buchelement soll die markierte Zitatstelle belegen?\");\n    printMessage(std::cout, \" \");\n    printMessage(std::cout, \"Buchelemente:\");\n    printMessage(std::cout, \"Autor     -> [1]\");\n    printMessage(std::cout, \"Verlag    -> [2]\");\n    printMessage(std::cout, \"ISBN      -> [3]\");\n    printMessage(std::cout, \"Ausgabe   -> [4]\");\n    printMessage(std::cout, \"Buchtitel -> [5]\");\n    printMessage(std::cout, \"Jahr      -> [6]\");\n}\n\nvoid ConsoleUtility::options() {\n    printMessage(std::cout, \"-------------------------------------------------\");\n    printMessage(std::cout, \"Dir stehen folgende App Funktionen zur Auswahl:\");\n    printMessage(std::cout, \"[0] <- App beenden\");\n    printMessage(std::cout, \"[1] <- Ein neues Buch speichern\");\n    printMessage(std::cout, \"[2] <- Einen eigenen Zitierstil definieren\");\n    printMessage(std::cout, \"[3] <- Die Buecher vordefiniert nach Harvard-Stil zitieren\");\n    printMessage(std::cout, \"[4] <- Stil auswaehlen und zitieren\");\n    printMessage(std::cout, \"[5] <- Das zuletzt angelegte Buch loeschen\");\n    printMessage(std::cout, \"-------------------------------------------------\");\n\n}\n\nvoid ConsoleUtility::printCiteStyles(const std::vector<CiteStyle> &citeStyles) {\n    int i{0};\n    for (auto style : citeStyles) {\n        std::cout << \"[\" << i << \"] \" << style.getCiteStyleName() << std::endl;\n        i++;\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/ConsoleUtility.cpp	(revision 4c88c0ec1b216ecf6827488f042c7cb823c2c932)
++++ app/ConsoleUtility.cpp	(date 1582824808641)
+@@ -17,32 +17,6 @@
+ void ConsoleUtility::position(ConsoleUtility *point, char value, int pos) {
+     point->i__ = pos;
+     point->a__ = 1;
+-
+-    point->option[0] = value;
+-
+-    while (point->a__ < 6) {
+-        point->option[point->i__] = '#';
+-        point->i__++;
+-        point->a__++;
+-    }
+-}
+-
+-//Todo Try catch handling
+-void ConsoleUtility::printMessage(std::ostream &os, const std::string &message) {
+-    os << message << std::endl;
+-}
+-
+-std::string ConsoleUtility::readUserInput(const std::string &message) {
+-    std::string input{};
+-    printMessage(std::cout, message);
+-    std::getline(std::cin, input);
+-    return input;
+-}
+-
+-int ConsoleUtility::readUserInputNbr() {
+-    std::string input{};
+-    std::getline(std::cin, input);
+-    return std::stoi(input);
+ }
+ 
+ int ConsoleUtility::readUserInputAppFunctionality() {
+@@ -57,7 +31,7 @@
+     } catch (int &errorCode) {
+         std::cout << errorCode << std::endl;
+         std::cout << "Geben Sie eine Zahl zwischen 0 und 5 ein." << std::endl;
+-        //return 0;
++        //return 0s
+     }
+ }
+ 
+Index: cmake-build-debug/CMakeFiles/ibb_basics_p1.dir/CXX.includecache
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#IncludeRegexLine: ^[ \t]*[#%][ \t]*(include|import)[ \t]*[<\"]([^\">]+)([\">])\n\n#IncludeRegexScan: ^.*$\n\n#IncludeRegexComplain: ^$\n\n#IncludeRegexTransform: \n\n/Users/h.gbr/Documents/clion/ibb_basics_p1/app/App.h\nostream\n-\n../domain/CiteStyle.h\n/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.h\n\n/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.cpp\nstring\n-\niostream\n-\nApp.h\n/Users/h.gbr/Documents/clion/ibb_basics_p1/app/App.h\nConsoleUtility.h\n/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.h\nvector\n-\n\n/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.h\n\n/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.h\nstring\n-\n\n/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.h\nstring\n-\nvector\n-\nBook.h\n/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.h\nalgorithm\n-\niterator\n-\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- cmake-build-debug/CMakeFiles/ibb_basics_p1.dir/CXX.includecache	(revision 4c88c0ec1b216ecf6827488f042c7cb823c2c932)
++++ cmake-build-debug/CMakeFiles/ibb_basics_p1.dir/CXX.includecache	(date 1582825341192)
+@@ -6,6 +6,20 @@
+ 
+ #IncludeRegexTransform: 
+ 
++/Users/h.gbr/Documents/clion/ibb_basics_p1/app/App.cpp
++iostream
++-
++App.h
++/Users/h.gbr/Documents/clion/ibb_basics_p1/app/App.h
++../domain/Book.h
++/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.h
++../domain/CiteStyle.h
++/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.h
++../database/BookRepository.h
++/Users/h.gbr/Documents/clion/ibb_basics_p1/database/BookRepository.h
++ConsoleUtility.h
++/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.h
++
+ /Users/h.gbr/Documents/clion/ibb_basics_p1/app/App.h
+ ostream
+ -
+@@ -26,6 +40,36 @@
+ 
+ /Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.h
+ 
++/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ExecuteApp.cpp
++iostream
++-
++ExecuteApp.h
++/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ExecuteApp.h
++App.h
++/Users/h.gbr/Documents/clion/ibb_basics_p1/app/App.h
++../database/BookRepository.h
++/Users/h.gbr/Documents/clion/ibb_basics_p1/database/BookRepository.h
++../database/CiteStyleRepository.h
++/Users/h.gbr/Documents/clion/ibb_basics_p1/database/CiteStyleRepository.h
++ConsoleUtility.h
++/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ConsoleUtility.h
++
++/Users/h.gbr/Documents/clion/ibb_basics_p1/app/ExecuteApp.h
++istream
++-
++
++/Users/h.gbr/Documents/clion/ibb_basics_p1/database/BookRepository.h
++vector
++-
++../domain/Book.h
++/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.h
++
++/Users/h.gbr/Documents/clion/ibb_basics_p1/database/CiteStyleRepository.h
++vector
++-
++../domain/CiteStyle.h
++/Users/h.gbr/Documents/clion/ibb_basics_p1/domain/CiteStyle.h
++
+ /Users/h.gbr/Documents/clion/ibb_basics_p1/domain/Book.h
+ string
+ -
